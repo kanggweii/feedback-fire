@@ -33,7 +33,7 @@
 </head>
 
 <body ng-controller="userController" >    
-    <div class="container" ng-controller="eventTracking">
+    <div class="container">
                 
         <h3> Counters and Timers and Queues </h3>
         Demonstraton of how to eempliment counters, timers, and task queues on Firebase. <br><br>
@@ -223,12 +223,6 @@
 </div> <!-- container -->
 <script>
   var myApp = angular.module("myApp", ["firebase","chart.js"]);
-  
-  myApp.controller('eventTracking', function ($analytics) {
-  $analytics.pageTrack('http://kanggweii.github.io/feedback-fire/');
-  $analytics.eventTrack('Download');
-  $analytics.eventTrack('Download', {  category: 'category', label: 'label' });
-  
   
   myApp.controller('userController', ['$scope', '$firebase',
     function($scope, $firebase) {
